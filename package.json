@@ -1,6 +1,6 @@
 { "name": "browserify-resolve-symlink-163",
   "version": "0.0.1",
-  "description": "Bug demo",
+  "description": "Bug demo for https://github.com/browserify/resolve/issues/163",
 
   "author": "M.K. (https://github.com/mk-pmb)",
   "homepage": "https://github.com/mk-pmb/browserify-resolve-symlink-163/#readme",
