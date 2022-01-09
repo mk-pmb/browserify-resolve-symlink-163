@@ -34,7 +34,7 @@ Example output
 ```text
 pify?
     node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/modules/pify/index.js
-    "resolve" module: /…/browserify-resolve-symlink-163/home/demo/my-cool-app/node_modules/pify/index.js
+    "resolve" module: /…/browserify-resolve-symlink-163/home/node_modules/pify/index.js
 
 locally-symlinked-module-163?
     node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/secret_modules/locally-symlinked-module-163/dummy.js
