@@ -37,11 +37,11 @@ pify?
     "resolve" module: /…/browserify-resolve-symlink-163/home/demo/my-cool-app/node_modules/pify/index.js
 
 locally-symlinked-module-163?
-    node.js resolver: /…/locally-symlinked-module-163/dummy.js
-    "resolve" module: /…/locally-symlinked-module-163/dummy.js
+    node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/secret_modules/locally-symlinked-module-163/dummy.js
+    "resolve" module: /…/browserify-resolve-symlink-163/home/demo/my-cool-app/node_modules/locally-symlinked-module-163/dummy.js
 
 global-module-163?
-    node.js resolver: /…/global-module-163/dummy.js
+    node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/secret_modules/global-module-163/dummy.js
     "resolve" module: Error: Cannot find module 'global-module-163' from '/home/runner/work/browserify-resolve-symlink-163/browserify-resolve-symlink-163/home/demo/my-cool-app'
 ```
 

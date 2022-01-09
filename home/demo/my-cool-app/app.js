@@ -6,9 +6,11 @@ const promisify = require('pify');
 
 require('locally-symlinked-module-163'); // Help my linter detect this dep
 
-function shorten(s) { return s.replace(/^\/\S+(?=\/[a-z\-]+-163\/)/g, '/…'); }
-// ^- The regexp's \S+ is greedy because GitHub CI uses paths with
-//    double project name.
+function shorten(s) {
+  return s.replace(/^\/\S+(?=\/[a-z\-]+ink-163\/)/g, '/…');
+  // ^- The regexp's \S+ is greedy because GitHub CI uses paths with
+  //    double project name.
+}
 
 async function discover(id) {
   console.log(id + '?');
