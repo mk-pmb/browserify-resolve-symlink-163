@@ -19,7 +19,8 @@ jobs:
                     -   "10.x"
                     -   "12.x"
                     -   "14.x"
-                    -   "16.x"
+                    # -   "16.x"
+                    # ^-- Error: Cannot find module 'p-fatal', w00t?
 
         steps:
             -   uses: actions/checkout@v2
