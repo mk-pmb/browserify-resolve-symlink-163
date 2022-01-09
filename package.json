@@ -1,0 +1,30 @@
+{ "name": "browserify-resolve-symlink-163",
+  "version": "0.0.1",
+  "description": "Bug demo",
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/browserify-resolve-symlink-163/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/browserify-resolve-symlink-163.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/browserify-resolve-symlink-163/issues"
+  },
+  "contributors": [],
+
+  "private": true, "license": "ISC",
+
+  "scripts": { "test": "elp && nodemjs test/all.mjs" },
+  "directories": { "test": "test" },
+  "eslintConfig": { "extends": "nodejs-pmb" },
+
+  "dependencies": {},
+  "browser": {
+  },
+  "devDependencies": {
+  },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
