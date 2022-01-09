@@ -15,15 +15,7 @@
 
   "private": true, "license": "ISC",
 
-  "scripts": { "test": "elp && nodemjs test/all.mjs" },
-  "directories": { "test": "test" },
-  "eslintConfig": { "extends": "nodejs-pmb" },
-
-  "dependencies": {},
-  "browser": {
-  },
-  "devDependencies": {
-  },
+  "scripts": { "test": "bash demo.sh" },
 
 
   "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"

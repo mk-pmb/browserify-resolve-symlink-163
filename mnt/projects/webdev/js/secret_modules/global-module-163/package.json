@@ -1,0 +1,7 @@
+{ "name": "global-module-163",
+  "version": "0.0.1",
+  "description": "A dummy module.",
+  "main": "dummy.js",
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
