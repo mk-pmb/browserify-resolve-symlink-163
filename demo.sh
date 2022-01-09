@@ -6,9 +6,9 @@ function demo_main () {
   export LANG{,UAGE}=en_US.UTF-8  # make error messages search engine-friendly
   local SELFPATH="$(readlink -m -- "$BASH_SOURCE"/..)"
 
-  export HOME="$SELFPATH"
+  export HOME="$SELFPATH/prepare"
+  cd -- "$HOME" || return $?
   vdo npm --versions
-  cd -- "$SELFPATH/prepare" || return $?
   vdo npm install . || return $?
 
   export HOME="$SELFPATH"/home/demo
