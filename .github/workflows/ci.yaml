@@ -29,8 +29,6 @@ jobs:
                 with:
                     node-version: ${{ matrix.node-version }}
             -   run: ./demo.sh
-                env:
-                    CI: true
 
 
 ...
