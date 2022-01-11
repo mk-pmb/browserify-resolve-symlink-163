@@ -25,13 +25,15 @@ The demo is meant to run on GitHub Actions:
       repo's logs, or file an issue here.
     * If your repo doesn't run the action, just commit some bogus activity
       like bumping the version in `package.json`.
-1.  Search for "pify?" to find the relevant output.
+1.  Search for "options" to find the demo output block.
 
 
 Example output
 --------------
 
 ```text
+"resolve" module version: 1.21.0 | options: { preserveSymlinks: true }
+
 pify?
     node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/modules/pify/index.js
     "resolve" module: /…/browserify-resolve-symlink-163/home/node_modules/pify/index.js
