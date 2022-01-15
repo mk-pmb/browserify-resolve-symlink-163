@@ -33,7 +33,7 @@ async function discover(id) {
 async function main() {
   await discover('pify');
   await discover('locally-symlinked-module-163');
-  await discover('global-module-163');
+  await discover('via-homedot-modules-163');
 }
 
 main();
