@@ -14,7 +14,7 @@ console.log('"resolve" module version:', resolvePkgInfo.version,
   '| options:', resoOpt);
 
 function shorten(s) {
-  return s.replace(/^\/\S+(?=\/[a-z\-]+ink-163\/)/g, '/…');
+  return s.replace(/\/\S+(?=\/[a-z\-]+ink-163\/)/g, '/…');
   // ^- The regexp's \S+ is greedy because GitHub CI uses paths with
   //    double project name.
 }
