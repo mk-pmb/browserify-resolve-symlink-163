@@ -36,7 +36,6 @@ async function discover(id) {
 
 async function main() {
   await discover('pify');
-  await discover('global-modules');
   await discover('locally-symlinked-module-163');
   await discover('via-homedot-modules-163');
   await discover('via-homedot-libraries-163');

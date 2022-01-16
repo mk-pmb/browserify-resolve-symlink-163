@@ -6,11 +6,6 @@ pify?
     "resolve" module: /…/browserify-resolve-symlink-163/home/node_modules/pify/index.js
      `- with options: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/modules/pify/index.js <- { preserveSymlinks: false }
 
-global-modules?
-    node.js resolver: /usr/lib/node_modules/global-modules/index.js
-    "resolve" module: Error: Cannot find module 'global-modules' from '/…/browserify-resolve-symlink-163/home/demo/my-cool-app'
-     `- with options: Error: Cannot find module 'global-modules' from '/…/browserify-resolve-symlink-163/home/demo/my-cool-app' <- { preserveSymlinks: false }
-
 locally-symlinked-module-163?
     node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/secret_modules/locally-symlinked-module-163/dummy.js
     "resolve" module: /…/browserify-resolve-symlink-163/home/demo/my-cool-app/node_modules/locally-symlinked-module-163/dummy.js
