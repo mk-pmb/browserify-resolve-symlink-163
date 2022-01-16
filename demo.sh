@@ -14,7 +14,7 @@ function demo_main () {
 
   export HOME="$SELFPATH"/home/demo
   cd -- "$HOME/my-cool-app" || return $?
-  vdo node app.js || return $?
+  vdo node app.js &> >(tee -- "$SELFPATH"/example_output.txt) || return $?
 }
 
 

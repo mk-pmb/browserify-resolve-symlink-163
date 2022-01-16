@@ -1,0 +1,29 @@
+----- 8< --== node app.js @ /…/browserify-resolve-symlink-163/home/demo/my-cool-app ==-- 8< ----- 8< ----- 8< ----- 8< -----
+"resolve" module version: 1.21.0
+
+pify?
+    node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/modules/pify/index.js
+    "resolve" module: /…/browserify-resolve-symlink-163/home/node_modules/pify/index.js
+     `- with options: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/modules/pify/index.js <- { preserveSymlinks: false }
+
+global-modules?
+    node.js resolver: /usr/lib/node_modules/global-modules/index.js
+    "resolve" module: Error: Cannot find module 'global-modules' from '/…/browserify-resolve-symlink-163/home/demo/my-cool-app'
+     `- with options: Error: Cannot find module 'global-modules' from '/…/browserify-resolve-symlink-163/home/demo/my-cool-app' <- { preserveSymlinks: false }
+
+locally-symlinked-module-163?
+    node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/secret_modules/locally-symlinked-module-163/dummy.js
+    "resolve" module: /…/browserify-resolve-symlink-163/home/demo/my-cool-app/node_modules/locally-symlinked-module-163/dummy.js
+     `- with options: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/secret_modules/locally-symlinked-module-163/dummy.js <- { preserveSymlinks: false }
+
+via-homedot-modules-163?
+    node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/secret_modules/via-homedot-modules-163/dummy.js
+    "resolve" module: Error: Cannot find module 'via-homedot-modules-163' from '/…/browserify-resolve-symlink-163/home/demo/my-cool-app'
+     `- with options: Error: Cannot find module 'via-homedot-modules-163' from '/…/browserify-resolve-symlink-163/home/demo/my-cool-app' <- { preserveSymlinks: false }
+
+via-homedot-libraries-163?
+    node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/secret_modules/via-homedot-libraries-163/dummy.js
+    "resolve" module: Error: Cannot find module 'via-homedot-libraries-163' from '/…/browserify-resolve-symlink-163/home/demo/my-cool-app'
+     `- with options: Error: Cannot find module 'via-homedot-libraries-163' from '/…/browserify-resolve-symlink-163/home/demo/my-cool-app' <- { preserveSymlinks: false }
+----- >8 --== node app.js => rv=0  ==-- >8 ----- >8 ----- >8 ----- >8 -----
+

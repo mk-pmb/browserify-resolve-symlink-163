@@ -31,21 +31,7 @@ The demo is meant to run on GitHub Actions:
 Example output
 --------------
 
-```text
-"resolve" module version: 1.21.0 | options: { preserveSymlinks: true }
-
-pify?
-    node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/modules/pify/index.js
-    "resolve" module: /…/browserify-resolve-symlink-163/home/node_modules/pify/index.js
-
-locally-symlinked-module-163?
-    node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/secret_modules/locally-symlinked-module-163/dummy.js
-    "resolve" module: /…/browserify-resolve-symlink-163/home/demo/my-cool-app/node_modules/locally-symlinked-module-163/dummy.js
-
-global-module-163?
-    node.js resolver: /…/browserify-resolve-symlink-163/mnt/projects/webdev/js/secret_modules/global-module-163/dummy.js
-    "resolve" module: Error: Cannot find module 'global-module-163' from '/home/runner/work/browserify-resolve-symlink-163/browserify-resolve-symlink-163/home/demo/my-cool-app'
-```
+see [example_output.txt](example_output.txt)
 
 * You might be wondering about the duplicate project name in the last line.
   That's the correct path.
