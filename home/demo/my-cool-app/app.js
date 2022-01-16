@@ -15,9 +15,19 @@ function shorten(s) {
   //    double project name.
 }
 
+async function dare(f) {
+  let r;
+  try {
+    r = await f();
+  } catch (e) {
+    r = String(e).replace(/\n\s*/g, '¶ ');
+  }
+  return shorten(r);
+}
+
 async function logResolve(id, opt) {
   function wrap(cb) { resolve(id, { ...opt }, cb); }
-  const found = shorten(await promisify(wrap)().then(null, String));
+  const found = await dare(promisify(wrap));
   if (opt) {
     console.log('     `- with options: %s <- %o', found, opt);
   } else {
@@ -28,8 +38,7 @@ async function logResolve(id, opt) {
 async function discover(id) {
   console.log('');
   console.log(id + '?');
-  console.log('    node.js resolver:',
-    shorten(require.resolve(id)));
+  console.log('    node.js resolver:', await dare(() => require.resolve(id)));
   await logResolve(id);
   await logResolve(id, { preserveSymlinks: false });
 }

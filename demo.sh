@@ -7,9 +7,13 @@ function demo_main () {
   local SELFPATH="$(readlink -m -- "$BASH_SOURCE"/..)"
 
   export CI=true
+  cd / || return $?
+  vdo whoami || return $?
+  vdo npm --versions || return $?
+  vdo npm root --global || return $?
+
   export HOME="$SELFPATH/prepare"
   cd -- "$HOME" || return $?
-  vdo npm --versions
   vdo npm install . || return $?
 
   export HOME="$SELFPATH"/home/demo
@@ -21,10 +25,12 @@ function demo_main () {
 function vdo () {
   local SHORT_PWD="$PWD"
   SHORT_PWD="${SHORT_PWD/#${SELFPATH%/*}\//\/…\/}"
-  echo "----- 8< --== $* @ $SHORT_PWD ==-- 8< ----- 8< ----- 8< ----- 8< -----"
+  local DESCR="$*"
+  [ "${#DESCR}" -lt 50 ] || DESCR="${DESCR:0:49}…"
+  echo "----- 8< --== $DESCR @ $SHORT_PWD ==-- 8< ----- 8< ----- 8< ----- 8< -----"
   "$@"
   local RV=$?
-  echo "----- >8 --== $* => rv=$RV  ==-- >8 ----- >8 ----- >8 ----- >8 -----"
+  echo "----- >8 --== $DESCR => rv=$RV  ==-- >8 ----- >8 ----- >8 ----- >8 -----"
   echo
   return "$RV"
 }
