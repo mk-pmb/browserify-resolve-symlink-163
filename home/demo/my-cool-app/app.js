@@ -7,11 +7,7 @@ const promisify = require('pify');
 
 require('locally-symlinked-module-163'); // Help my linter detect this dep
 
-const resoOpt = {
-};
-
-console.log('"resolve" module version:', resolvePkgInfo.version,
-  '| options:', resoOpt);
+console.log('"resolve" module version:', resolvePkgInfo.version);
 
 function shorten(s) {
   return s.replace(/\/\S+(?=\/[a-z\-]+ink-163\/)/g, '/…');
@@ -19,15 +15,23 @@ function shorten(s) {
   //    double project name.
 }
 
+async function logResolve(id, opt) {
+  function wrap(cb) { resolve(id, { ...opt }, cb); }
+  const found = shorten(await promisify(wrap)().then(null, String));
+  if (opt) {
+    console.log('     `- with options: %s <- %o', found, opt);
+  } else {
+    console.log('    "resolve" module: %s', found);
+  }
+}
+
 async function discover(id) {
   console.log('');
   console.log(id + '?');
   console.log('    node.js resolver:',
     shorten(require.resolve(id)));
-
-  function wrap(cb) { resolve(id, resoOpt, cb); }
-  console.log('    "resolve" module:',
-    shorten(await promisify(wrap)().then(null, String)));
+  await logResolve(id);
+  await logResolve(id, { preserveSymlinks: false });
 }
 
 async function main() {
